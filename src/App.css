@@ -1,0 +1,45 @@
+.body {
+	background-color: #e8e9eb;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	background-color: #313638;
+	padding: 16px 16px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px
+		0px 1px;
+}
+
+.logo {
+	color: white;
+	margin-left: 125px;
+}
+
+.box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 75px;
+	height: 75px;
+	background: #e4b363;
+}
+
+.box span {
+	font-size: 64px;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	padding-top: 125px;
+	height: 100%;
+}
+
+.content span {
+	font-size: 75px;
+}
