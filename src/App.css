@@ -1,45 +1,173 @@
 .body {
-	background-color: #e8e9eb;
-	height: 100vh;
-	overflow: hidden;
+	height: 100%;
 }
 
 .header {
+	position: sticky;
+	top: 0;
 	display: flex;
 	align-items: center;
 	background-color: #313638;
-	padding: 16px 16px;
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px
-		0px 1px;
+	padding: 16px;
+	z-index: 99;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px
+		12px;
+}
+
+.hero {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-content: end;
+	width: 100%;
+	height: 760px;
+
+	background-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.32),
+			rgba(0, 0, 0, 0.73)
+		), url("./assets/resh.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	overflow: hidden;
+}
+
+.hero span {
+	text-align: center;
+	margin: 0 16px;
+}
+
+.hero img {
+	width: 100%;
 }
 
 .logo {
 	color: white;
-	margin-left: 125px;
-}
-
-.box {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 75px;
-	height: 75px;
-	background: #e4b363;
-}
-
-.box span {
-	font-size: 64px;
+	margin-left: 16px;
+	text-shadow: 2px 2px 0 black;
+	transform: translate(-2px, -2px);
+	font-size: 32px;
 }
 
 .content {
 	display: flex;
 	flex-direction: column;
-
+	justify-content: end;
 	align-items: center;
-	padding-top: 125px;
-	height: 100%;
+	color: #e0dfd5;
 }
 
 .content span {
 	font-size: 75px;
+	text-shadow: 5px 5px 0 #313638;
+	transform: translate(-4px, -4px);
+}
+
+.yellow {
+	position: relative;
+	z-index: 1;
+	background-color: #e4b363;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+	padding-bottom: 25px;
+}
+
+.blue {
+	position: relative;
+	z-index: 0;
+	background-color: #90a9b7;
+	margin-top: -65px;
+	padding-top: 35px;
+}
+
+.red {
+	background-color: #ef6461;
+}
+
+.black {
+	position: relative;
+	color: white;
+	background-color: #313638;
+	z-index: 3;
+	clip-path: polygon(0px -36px, 100% 0px, 100% 100%, 0px 90%);
+}
+
+.red p,
+.red h4,
+.black p,
+.black h3 {
+	color: #e0dfd5;
+}
+
+.black h3::after {
+	background-color: #e0dfd5;
+}
+
+.usp {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	padding: 64px 16px 67px;
+	margin: 0 auto;
+	max-width: 750px;
+	text-align: center;
+}
+.usp h2,
+.usp h3 {
+	margin-bottom: 16px;
+}
+
+.cta-btn {
+	background-color: #e4b363;
+	font-weight: 700;
+	border-radius: 128px;
+	font-size: 32px;
+	border: none;
+	transition: all 0.2s;
+	margin-top: 8px;
+}
+
+.cta-btn:hover {
+	background-color: #e4ab51;
+	outline: none;
+}
+
+.footer {
+	margin-top: -64px;
+	padding-top: 64px;
+}
+
+.footer h4 {
+	margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+	.hero {
+		height: 295px;
+	}
+	.hero span {
+		font-size: 28px;
+	}
+
+	.usp {
+		padding: 32px 16px 32px;
+	}
+	.yellow {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+	}
+	.blue {
+		padding-top: 58px;
+	}
+	.black {
+		padding-bottom: 58px;
+	}
+	.cta-btn {
+		font-size: 22px;
+	}
+
+	.logo {
+		font-size: 24px;
+	}
 }
