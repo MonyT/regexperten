@@ -34,6 +34,11 @@ textarea {
 	resize: none;
 }
 
+textarea::placeholder,
+input::placeholder {
+	color: #313638;
+}
+
 button {
 	background-color: #ef6461;
 	color: #e8e9eb;
